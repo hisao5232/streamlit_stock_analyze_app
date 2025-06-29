@@ -1,7 +1,11 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
+
+# 日本語フォントを指定
+matplotlib.rcParams['font.family'] = 'MS Gothic'
 
 st.title("📈 株価チャート表示アプリ")
 
