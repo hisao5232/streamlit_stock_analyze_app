@@ -44,3 +44,64 @@ PythonとStreamlitを使った**Webアプリ開発の学習用**プロジェク�
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+
+2. Create virtual environment / 仮想環境の作成
+
+
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. Install dependencies / 必要なライブラリのインストール
+
+
+
+pip install -r requirements.txt
+
+4. Run the app / アプリを起動
+
+
+
+streamlit run main.py
+
+
+---
+
+🌐 Deployment (coming soon) / デプロイ（今後予定）
+
+This app is being prepared for deployment to platforms such as:
+
+Streamlit Community Cloud
+
+Render
+
+Railway
+
+
+このアプリは、上記のようなPaaS環境へのデプロイを予定しています。
+
+
+---
+
+📚 Learning Purpose / 学習目的
+
+This project was created as a personal learning tool for building full-stack data apps with Python and Streamlit.
+
+このプロジェクトは、PythonとStreamlitを使った個人学習用のWebアプリ開発教材として制作されました。
+
+
+---
+
+📄 License / ライセンス
+
+MIT License
+
+
+---
+
+🙌 Author / 作者
+
+Name: hisao
+
+
+---
