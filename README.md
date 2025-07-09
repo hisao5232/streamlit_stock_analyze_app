@@ -43,17 +43,17 @@ PythonとStreamlitを使った**Webアプリ開発の学習用**プロジェク�
 1. **Clone this repo / リポジトリをクローン**
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name```
+cd your-repo-name
 
 2. Create virtual environment / 仮想環境の作成
-```python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate```
+`python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate`
 
 3. Install dependencies / 必要なライブラリのインストール
-```pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 4. Run the app / アプリを起動
-```streamlit run main.py```
+`streamlit run main.py`
 
 
 ---
