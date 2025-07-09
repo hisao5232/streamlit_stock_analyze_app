@@ -64,7 +64,7 @@ streamlit run main.py
 
 ---
 
-🌐 Deployment (coming soon) / デプロイ（今後予定）
+## 🌐 Deployment (coming soon) / デプロイ（今後予定）
 
 This app is being prepared for deployment to platforms such as:
 
@@ -80,7 +80,7 @@ Railway
 
 ---
 
-📚 Learning Purpose / 学習目的
+## 📚 Learning Purpose / 学習目的
 
 This project was created as a personal learning tool for building full-stack data apps with Python and Streamlit.
 
@@ -89,14 +89,14 @@ This project was created as a personal learning tool for building full-stack dat
 
 ---
 
-📄 License / ライセンス
+## 📄 License / ライセンス
 
 MIT License
 
 
 ---
 
-🙌 Author / 作者
+## 🙌 Author / 作者
 
 Name: hisao
 
