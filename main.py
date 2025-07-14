@@ -3,8 +3,15 @@ import yfinance as yf
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
+import matplotlib.dates as mdates
 import sqlite3
 import hashlib
+import os
+
+# フォントファイルのパスを設定
+font_path = os.path.join(os.getcwd(), "fonts", "NotoSansJP-Regular.ttf")
+jp_font = font_manager.FontProperties(fname=font_path)
 
 # --- パスワードハッシュ化関数 ---
 def hash_password(password):
@@ -48,10 +55,6 @@ def main():
 
     if st.session_state.logged_in:
         st.success("ログイン済みです")
-        
-        # 日本語フォントを指定
-        matplotlib.rcParams['font.family'] = 'MS Gothic'
-
         st.title("📈 株価チャート表示アプリ")
 
         # 銘柄入力
@@ -79,11 +82,14 @@ def main():
                 ax.plot(data.index, data["Close"], label="終値", color="blue")
                 ax.plot(data.index, data["MA25"], label="25日移動平均", color="orange")
                 ax.plot(data.index, data["MA75"], label="75日移動平均", color="green")
-                ax.set_title(f"{ticker} の株価")
-                ax.set_xlabel("日付")
-                ax.set_ylabel("価格")
-                ax.legend()
+                ax.set_title(f"{ticker} の株価", fontproperties=jp_font)
+                ax.set_xlabel("日付", fontproperties=jp_font)
+                ax.set_ylabel("価格", fontproperties=jp_font)
+                ax.legend(prop=jp_font)
                 ax.grid(True)
+                ax.xaxis.set_major_locator(mdates.AutoDateLocator())
+                ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # 表示フォーマット
+                fig.autofmt_xdate()
                 st.pyplot(fig)
 
         if st.button("ログアウト"):
